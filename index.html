@@ -8,26 +8,69 @@
 
     <title>Biglietto treno</title>
 </head>
-<body>
+<body class="bg-danger bg-gradient text-light">
     
-    <h1>Boolean Trains</h1>
+    <div class="container p-5">
+        <h1 class="mb-4">Boolean Trains</h1>
+    
+        <h2 class="mb-4">Calcola il prezzo del tuo biglietto</h2>
+    
+        <form class="p-4">
 
-    <h2>Calcola i biglietto</h2>
+            <div class="row row-cols-4 justify-content-between mb-4">
+                <label for="nome-utente">Come ti chiami?</label>
+                <input type="text" id="nome-utente">
+            </div>
 
-    <form>
-        <label for="chilometri-utente">Quanti chilometri deve fare?</label>
-        <input type="number" id="chilometri-utente">
+            <div class="row row-cols-4 justify-content-between mb-4">
+                <label for="chilometri-utente">Quanti chilometri devi fare?</label>
+                <input type="number" id="chilometri-utente">
+            </div>
+    
+            <div class="row row-cols-4 justify-content-between mb-4">
+                <label for="eta-utente">Quanti anni hai?</label>
+                <input type="number" id="eta-utente">
+            </div>
+    
+            <input type="button" id="calc" value="Calcola" class="btn btn-light">
+    
+        </form>
+    
+        <div id="risultato container">
 
-        <label for="eta-utente">Quanti anni hai?</label>
-        <input type="number" id="eta-utente">
-
-        <input type="button" id="calc" value="Calcola">
-
-    </form>
-
-    <div id="risultato">
-        
+            <div class="row bg-light p-4">
+                <div class="fs-3 text-dark mb-3 fw-bold">Dettagli biglietto</div>
+                <div class="col-3 bg-dark text-wrap p-4 m-0">
+                    <div class="text-uppercase fs-4 fw-bold">
+                        nome passeggero
+                    </div>
+                    <div id="nome-utente" class="fs-5 fw-bold">
+                        
+                    </div>
+                </div>
+                <div class="col-9 row p-4 text-dark m-0 border border-black">
+                    <div class="row">
+                        <div class="col-6 fw-bold">
+                            Offerta
+                        </div>
+                        <div class="col-6 fw-bold">
+                            Costo biglietto
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="offerta" class="col-6">
+                            
+                        </div>
+                        <div id="costo" class="col-6">
+                            
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+    
+        </div>
     </div>
+
     
 
     

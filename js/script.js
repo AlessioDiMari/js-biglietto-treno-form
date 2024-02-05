@@ -21,6 +21,8 @@ const calcButton = document.getElementById("calc");
 // Salvo il risultato
 const result = document.getElementById("risultato");
 
+
+
 // Dichiaro le variabili del prezzo base e quello finale
 
 
@@ -41,14 +43,14 @@ calcButton.addEventListener("click",
 
             prezzoFinale = prezzoFisso - (prezzoFisso * 0.2);
 
-            result.innerHTML = "Hai meno di 18 anni, hai diritto ad uno sconto del 20%!"
+            result.innerHTML = "Hai meno di 18 anni, hai diritto ad uno sconto del 20%!<br>"
 
         } else if (userAge.value > 65){
             // Se l'utente ha più di 65 anni verrà applicato
             // uno sconto del 40%
             prezzoFinale = prezzoFisso - (prezzoFisso * 0.4);
 
-            result.innerHTML = "Hai più di 65 anni, hai diritto ad uno sconto del 40%!"
+            result.innerHTML = "Hai più di 65 anni, hai diritto ad uno sconto del 40%!<br>"
 
         } else {
             // Se nessuna delle due condizioni precedenti
@@ -60,7 +62,7 @@ calcButton.addEventListener("click",
         // Scrivo il risultato con due cifre decimali
         prezzoFinale = prezzoFinale.toFixed(2)
 
-        result.innerHTML += `<br>Il pagamento viene di ${prezzoFinale}€`
+        result.innerHTML += `Il pagamento viene di ${prezzoFinale}€`
 
     }
 
